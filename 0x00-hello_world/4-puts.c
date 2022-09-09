@@ -1,20 +1,14 @@
 #include <stdio.>
+
 /**
+ * Beginning of  main function
  *
- *  *Beginning of  main function
+ * Return: Nothing/(o) to the system
  *
- *   *
- *
- *    * Return: Nothing (o)
- *
- *     */
-
+ */
 int main(void)
-
 {
 
-		puts("\"Programming is like building a multilingual puzzle");
-
-			return (0);
-
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
