@@ -1,20 +1,14 @@
-#include <stdio.h>
-
-
+#include <stio.h>
 
 /**
  *
- *  *Beginning of main function - Entry point
+ * MAIN FUNCTION
  *
- *   *
+ 8Return 0 to the system
  *
- *    * Return nothing
- *
- *     */
-
+ */
 int main(void)
-
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return (0);
+printf("with proper grammar, but the outcome is a piece of art,\n");
+return (0);
 }
