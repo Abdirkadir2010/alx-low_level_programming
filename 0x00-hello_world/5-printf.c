@@ -4,7 +4,7 @@
  *
  * MAIN FUNCTION
  *
- 8Return 0 to the system
+ * 8Return 0 to the system
  *
  */
 int main(void)
