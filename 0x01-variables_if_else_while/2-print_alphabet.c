@@ -1,21 +1,19 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <stdio.h>
 
 /**
- * main -Beginning of main function
+ * main - beginning of main function prints the lowercase alphabet
  *
- * Return: o to the system
+ * Return: 0 to the system
  */
 int main(void)
 {
-	char small_alphabet;
+	char c;
 
-	for (small_alphabet = 'a'; small_alphabet <= 'z'; small_alphabet++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(small_alphabet);
-		putchar('\n');
+		putchar(c);
 	}
-
+	putchar('\n');
 	return (0);
 }
