@@ -11,9 +11,9 @@ int main(void)
 	int num;
 	char c;
 
-	num = 0;
+	num = '0';
 
-	while (num <= 9)
+	while (num <= '9')
 	{
 		putchar(num);
 		num++;
@@ -23,6 +23,7 @@ int main(void)
 	while (c <= 'f')
 	{
 		putchar(c);
+		c++;
 	}
 	putchar('\n');
 	return (0);
