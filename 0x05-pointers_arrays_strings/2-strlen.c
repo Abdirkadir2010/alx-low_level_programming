@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strlen - function that returns length of string
+ * _strlen - function that returns length of string
  * @s: input string
  *
  * Return: String length to calling function
