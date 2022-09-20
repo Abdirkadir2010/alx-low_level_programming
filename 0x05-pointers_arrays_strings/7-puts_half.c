@@ -1,7 +1,11 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 
 /**
- * void puts_half - prints half of string
+ * puts_half - prints half of string
+ *@str: input strings
  *
  * Returns: Nothing(void)
  */
