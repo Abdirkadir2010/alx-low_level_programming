@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * puts2 - prints charcter in the string
@@ -10,15 +11,15 @@
  */
 void puts2(char *str)
 {
-	int j = 0;
+	int strlen, j = 0;
 
-	while (str[j] != '\0')
+	strlen = _strlen(str);
+
+	while (j < strlen)
 	{
-		if (j % 2 == 0)
-		{
-			putchar(str[j]);
-		}
-		j++;
+		_putchar(str[j]);
+		j += 2;
 	}
-		putchar('\n');
+	_putchar('\n');
 }
+

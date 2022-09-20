@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 /**
@@ -11,7 +12,7 @@
  */
 void puts_half(char *str)
 {
-	int j, mid;
+	int j, mid, len;
 
 	j = 0;
 
@@ -19,15 +20,18 @@ void puts_half(char *str)
 	{
 		j++;
 	}
-	mid = j / 2;
+	len = strlen(str);
+	mid = len / 2;
 
-	if (mid % 2 == 1)
+	if (len % 2 == 1)
 		mid++;
-	while (mid < j)
+	else
+		mid = len / 2;
+	j = mid;
+	while (j < len)
 	{
-		putchar(str[mid - 1]);
-		mid++;
+		putchar(str[j]);
+		j++;
 	}
-	putchar(str[j - 1]);
 	putchar('\n');
 }
