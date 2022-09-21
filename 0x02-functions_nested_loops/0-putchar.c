@@ -1,23 +1,21 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
  * main - Beginning of main function
- * _putchar - system function
  *
- * Description: ' This program about putchar function'
+ * Description: 'This program about putchar function'
  *
- * Returns: 0 to the system
+ * Return: 0 to the system
  */
 int main(void)
 {
-	char putc[] = "_putchar";
+	char c[8] = "_putchar";
 
-	int i;
+	int j;
 
-	for (i = 0; i <= 7; i++)
-	{
-		_putchar(i);
-	}
+	for (j = 0; j <= 7; j++)
+		_putchar(c[j]);
 	_putchar('\n');
 	return (0);
 }
