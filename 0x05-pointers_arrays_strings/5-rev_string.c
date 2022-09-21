@@ -1,7 +1,7 @@
 #include "main.h"
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * rev_string -  function taht reverses the string
@@ -9,14 +9,16 @@
  *
  * Return: nothing(void)
  */
-
 void rev_string(char *s)
 {
-	int j;
+	int len;
 
-	for (j = len - 1; j >= 0; j--)
+	len = strlen(s);
+	
+	while (len >= 0)
 	{
-		putchar(s[j]);
+		putchar(s[len]);
+		len--;
 	}
 	putchar('\n');
 }
