@@ -4,6 +4,7 @@
  * _strncpy - Copy the the n strings
  * @dest: To where the string copied
  * @src: from where the string copied
+ * @n: n number of string to be copied
  *
  * Return: The copied string
  */
