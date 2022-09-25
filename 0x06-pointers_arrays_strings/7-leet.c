@@ -11,26 +11,20 @@
  */
 char *leet(char *str)
 {
-	int j = 0, i = 0;
+	int i, j = 0;
+	int lower_mapping[] = {97, 101, 111, 116, 108};
+	int upper_mapping[] = {65, 69, 79, 84, 76};
+	int n[] = {52, 51, 48, 55, 49};
 
-	char mapping_low[8] = {'o', 'l', '\0', 'e', 'a', '\0', '\0', 't'};
-	char mapping_upper[8] = {'O', 'L', '\0', 'E', 'A', '\0', '\0', 'T'};
-
-	while (str [j]  != '\0')
+	while (str[j] != '\0')
 	{
-		while (i < 0)
+		for (i = 0; i < 5; i++)
 		{
-			if (str[j] == mapping_low[i] || str[j] == mapping_upper[i])
+			if (str[j] == lower_mapping[i] || str[j] == upper_mapping[i])
 			{
-				str[j] = mapping_low[i];
+				str[j] = n[i];
 				break;
 			}
-			else if (str[j] == mapping_upper[i])
-			{
-				str[j] = mapping_upper[i];
-				break;
-			}
-			i++;
 		}
 		j++;
 	}
