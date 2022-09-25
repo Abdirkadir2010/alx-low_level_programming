@@ -1,37 +1,38 @@
 #include "main.h"
+#include <string.h>
+#include <stdlib.h>
+
 
 /**
  * *leet - that encodes a string into 1337
+ * @str: strings
  *
+ * Return: charcters
  */
-char *leet(char *)
+char *leet(char *str)
 {
-	int j = 0;
+	int j = 0, i = 0;
+
+	char mapping_low[8] = {'o', 'l', '\0', 'e', 'a', '\0', '\0', 't'};
+	char mapping_upper[8] = {'O', 'L', '\0', 'E', 'A', '\0', '\0', 'T'};
 
 	while (str [j]  != '\0')
 	{
-		str[j] = transform(str[j]);
-		j++;
-	}
-	return (str);
-}
-
-// second function in task 6
-char transform(char x)
-{
-	char mapping_low[8] = {'o', 'l', '\0','e', 'a', '\0','\0','t'};
-	char mappping_upper[8] = {'O','L','\0', 'E', 'A','\0', '\\0','T'};
-
-	int i = 0;
-	char replacement = x;
-	while (i < 8)
-	{
-		if (x == mapping_low[j] || x == mapping_upper[j])
+		while (i < 0)
 		{
-			replacement = j '0';
-			break;
+			if (str[j] == mapping_low[i] || str[j] == mapping_upper[i])
+			{
+				str[j] = mapping_low[i];
+				break;
+			}
+			else if (str[j] == mapping_upper[i])
+			{
+				str[j] = mapping_upper[i];
+				break;
+			}
+			i++;
 		}
 		j++;
 	}
-	return (replacement);
+	return (str);
 }
