@@ -1,12 +1,12 @@
-#include "mai.h"
+#include "main.h"
 #include <stdio.h>
 
-/*
+/**
  * print_array - check the code
  * @a: array of integer
  * @n: the number of element to swap
  */
- void print_array(int *a, int n)
+void print_array(int *a, int n)
 {
 	int i;
 
