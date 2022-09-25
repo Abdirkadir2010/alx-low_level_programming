@@ -4,7 +4,7 @@
 /**
  * *cap_string - capitalize string
  * @str: string need to be capitalized
- * 
+ *
  * Return: Return the string
  */
 char *cap_string(char *str)
@@ -19,20 +19,23 @@ char *cap_string(char *str)
 			{
 				str[j] -= 32;
 			}
-			if (str[j - 1] == ' ' ||
-		 	    str[j - 1] == '\t' || 
-		   	    str[j - 1] == '\n' || 
-		   	    str[j - 1] == ',' || 
-		   	    str[j - 1] == ';' || 
-		    	    str[j - 1] == '.' || 
-		    	    str[j - 1] == '!' || 
-		    	    str[j - 1] == '?' || 
-		    	    str[j - 1] == '"' || 
-		    	    str[j - 1] == '(' || 
-		      	    str[j - 1] == ')' || 
-		    	    str[j - 1] == '{' || 
-		    	    str[j - 1] == '}')
+			if (
+					str[j - 1] == ' ' ||
+					str[j - 1] == '\t' ||
+					str[j - 1] == '\n' ||
+					str[j - 1] == ',' ||
+					str[j - 1] == ';' ||
+					str[j - 1] == '.' ||
+					str[j - 1] == '!' ||
+					str[j - 1] == '?' ||
+					str[j - 1] == '"' ||
+					str[j - 1] == '(' ||
+					str[j - 1] == ')' ||
+					str[j - 1] == '{' ||
+					str[j - 1] == '}')
+			{
 				str[j] -= 32;
+			}
 		}
 		j++;
 	}
