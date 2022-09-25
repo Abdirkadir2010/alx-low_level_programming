@@ -11,14 +11,18 @@
  */
 void puts2(char *str)
 {
-	int strlen, j = 0;
+	int j = 0;
 
-	strlen = _strlen(str);
-
-	while (j < strlen)
+	while (j >= 0)
 	{
-		_putchar(str[j]);
-		j += 2;
+		if (str[j] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		if (j % 2 == 0)
+			_putchar(str[j]);
+		j++;
 	}
 	_putchar('\n');
 }
