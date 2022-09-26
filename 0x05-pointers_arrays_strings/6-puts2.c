@@ -1,7 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * puts2 - prints charcter in the string
@@ -12,18 +9,16 @@
 void puts2(char *str)
 {
 	int j = 0;
+	int i = 0;
 
-	while (j >= 0)
-	{
-		if (str[j] == '\0')
-		{
-			_putchar('\n');
-			break;
-		}
-		if (j % 2 == 0)
-			_putchar(str[j]);
+	while (str[j] != '\0')
 		j++;
+	j = j - 1;
+
+	while (i <= j)
+	{
+		_putchar(str[i]);
+		i += 2;
 	}
 	_putchar('\n');
 }
-
