@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
- * _evaluate - evaluate function sqrt
- * @i: interger
- * @n: interger
- * Return: evaluate sqrt
+ * calc_sqr -Calculates square root of a number
+ * @a: interger
+ * @b: interger
+ * Return: Squre root of number
  */
-int _evaluate(int i, int n)
+int calc_sqr(int a, int b)
 {
-	if (n == 0 || n == 1)
-		return (n);
-	else if (i * i < n)
-		return (_evaluate(i + 1, n));
-	else if (i * i == n)
-		return (i);
-	return (-1);
-
-	return (-1);
+	if (b % (a / b) == 0)
+	{
+		if (b * (a / b) == a)
+			return (b);
+		else
+			return (-1);
+	}
+	return (0 + calc_sqr(a, b + 1));
 }
 /**
  * _sqrt_recursion - evaluate sqrt
@@ -25,14 +24,11 @@ int _evaluate(int i, int n)
  */
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-
-	if (i < 0)
-	{
+	if (n < 0)
 		return (-1);
-	}
-	else
-	{
-		return (_evaluate(i, n));
-	}
+	if (n == 0)
+		return  (0);
+	if (n == 1)
+		return (1);
+	return (calc_sqr(n, 2));
 }
