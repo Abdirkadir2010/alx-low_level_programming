@@ -10,7 +10,7 @@ int calc_pow(int i, int n)
 {
 	if (n == 1)
 		return (i);
-	else if (n == 0)
+	if (n == 0)
 		return (1);
 	else
 		return (i * calc_pow(i, n - 1));
@@ -26,9 +26,5 @@ int _pow_recursion(int x, int y)
 
 	if (y < 0)
 		return (-1);
-	else
-	{
-		return (calc_pow(x, y)); 
-	}
+	return (calc_pow(x, y));
 }
-
