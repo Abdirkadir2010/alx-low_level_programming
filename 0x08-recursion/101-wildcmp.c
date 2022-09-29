@@ -2,8 +2,8 @@
 
 /**
  * wildcmp - Compare strings
- * @s1: pointer to string params
- * @s2: pointer to string params
+ * @s1: input string
+ * @s2: input string with special character *
  * Return: 0
  */
 int wildcmp(char *s1, char *s2)
