@@ -2,8 +2,8 @@
 
 /**
  * factorial - factorial of a given number
- * @n: pointer block of memory to fill
- * Return: factorial
+ * @n: input number
+ * Return: factorial of n
  */
 int factorial(int n)
 {
@@ -14,5 +14,5 @@ int factorial(int n)
 	else if (n < 0)
 		return (-1);
 	else
-		return (n * factorial(n - 1));
+		return (n * factorial(n - 1)); /* Recursive function */
 }
