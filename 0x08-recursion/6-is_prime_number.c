@@ -1,44 +1,29 @@
 #include "main.h"
 /**
- * evaluate_num - recursion loop
+ * checks_prime_num - recursion loop
  * @num: num
- * @iterator: number to iterate
+ * @t: number to iterate
  * Return: return 1 or 0
  */
-int evaluate_num(int num, int iterator)
+int checks_prime_num(int num, int t)
 {
-	if (iterator == num - 1)
+	if (num % t == 0)
 	{
-		return (1);
+		if (num == t)
+			return (1);
+		else
+			return (0);
 	}
-	else if (num % iterator == 0)
-	{
-		return (0);
-	}
-	if (num % iterator != 0)
-	{
-		return (evaluate_num(num, iterator + 1));
-	}
-	return (0);
+	return (0 + checks_prime_num(num, t + 1));
 }
 /**
  * is_prime_number - evaluate prime or not
- * @num: number
+ * @n: number
  * Return: return 1 prime - return 0 otherwise
  */
-int is_prime_number(int num)
+int is_prime_number(int n)
 {
-	int iterator;
-
-	iterator = 2;
-
-	if (num < 2)
-	{
+	if (n <= 1)
 		return (0);
-	}
-	if (num == 2)
-	{
-		return (1);
-	}
-	return (evaluate_num(num, iterator));
+	return (checks_prime_num(n, 2));
 }
