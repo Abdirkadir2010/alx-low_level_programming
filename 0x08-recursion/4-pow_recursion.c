@@ -1,35 +1,35 @@
 #include "main.h"
 
 /**
- * _evaluate - evaluate function sqrt
+ * calc_pow - calculate function sqrt
  * @i: interger
  * @n: interger
  * Return: evaluate sqrt
  */
-int _evaluate(int i, int n)
+int _calc_pow(int i, int n)
 {
 	if (n == 0 || n == 1)
 		return (n);
 	else if (i * i < n)
-		return (_evaluate(i + 1, n));
+		return (calc_pow(i + 1, n));
 	else if (i * i == n)
 		return (i);
 	return (-1);
 }
 /**
- * _sqrt_recursion - evaluate sqrt
- * @n: interger
+ * _pow_recursion - evaluate sqrt
+ * @x: interger num
+ * @y: integer num
  * Return: Sgrt_recursion
  */
-int _sqrt_recursion(int n)
+int _pow_recursion(int x, int y);
 {
-	int i = 0;
 
-	if (i < 0)
+	if (y < 0)
 		return (-1);
 	else
 	{
-		return (_evaluate(i, n)); 
+		return (calc_pow(x, y)); 
 	}
 }
 
