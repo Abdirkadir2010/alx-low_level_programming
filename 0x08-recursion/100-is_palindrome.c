@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - size
- * @s: pointer to string params
- * Return: recursion
+ * _strlen_recursion - string length
+ * @s: input string
+ * Return: length of string
  */
 int _strlen_recursion(char *s)
 {
@@ -14,12 +14,12 @@ int _strlen_recursion(char *s)
 	return (1 + _strlen_recursion(++s));
 }
 /**
- * p1 - palindrome
- * @s: pointer to string
- * @l: position
+ * checks_palindrome - palindrome
+ * @s: input string
+ * @l: pos of string
  * Return: boolena
  */
-int p1(char *s, int l)
+int checks_palindrome(char *s, int l)
 {
 	if (l < 1)
 	{
@@ -27,19 +27,19 @@ int p1(char *s, int l)
 	}
 	if (*s == *(s + l))
 	{
-		return (p1(s + 1, l - 2));
+		return (checks_palindrome(s + 1, l - 2));
 	}
 	return (0);
 }
 /**
  * is_palindrome - palindrome
- * @s: pointer to string
- * Return: recursion
+ * @s: input string
+ * Return: recursion function
  */
 int is_palindrome(char *s)
 {
 	int len = _strlen_recursion(s);
 
-	return (p1(s, len - 1));
+	return (checks_palindrome(s, len - 1));
 }
 
