@@ -1,14 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - function
  * @argc: contain number of commands
- * @arcv[]: list number of commands
+ * @argv: list number of commands
  * Return: 0
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-	printf("argc = %d\n", argc);
+	printf("%s\n", argv[0]);
 	return (0);
 }
