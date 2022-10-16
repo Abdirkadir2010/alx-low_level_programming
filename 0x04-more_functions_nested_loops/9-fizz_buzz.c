@@ -11,7 +11,7 @@ int main(void)
 
 	while (j <= 100)
 	{
-		if (j % 3 == 0 && j % 5 == 0)
+		if ((j % 3) == 0 && (j % 5) == 0)
 			printf("FizzBuzz");
 		else if (j % 3 == 0)
 			printf("Fizz");
