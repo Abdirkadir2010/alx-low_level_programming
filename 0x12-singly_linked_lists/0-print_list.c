@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+
 /**
  * print_list - out put all elemnts of list_t list.
  * @h: The list of linked list list_t
@@ -14,7 +16,7 @@ size_t print_list(const list_t *h)
 		if (h->str != NULL)
 			printf("[%d]%s\n", h->len, h->str);
 		else
-			printf("[0] [nil]\n");
+			printf("[0] (nil)\n");
 		nodes++;
 		h = h->next;
 	}
