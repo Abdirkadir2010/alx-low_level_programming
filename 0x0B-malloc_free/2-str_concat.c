@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * _strlen - count arrray function
  * @s: pointers
@@ -10,7 +10,7 @@ int _strlen(char *s)
 {
 	unsigned int str_len;
 
-	i = 0;
+	str_len = 0;
 
 	while (s[str_len] != '\0')
 	{
@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	n = (_strlen(s1) + _strlen(s2) + 1);
 
-	dest = (char *) malloc(size * sizeof(char));
+	dest = (char *) malloc(n * sizeof(char));
 
 	if (dest == 0)
 		return (NULL);
