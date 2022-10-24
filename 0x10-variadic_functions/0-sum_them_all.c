@@ -14,11 +14,15 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int index, sum = 0;
 
 	va_start(p, n);
-
-	for (index = 0; index < n; index++)
+	if (n == 0)
+		return (0);
+	else
 	{
-		sum += va_arg(p, int);
+		for (index = 0; index < n; index++)
+		{
+			sum += va_arg(p, int);
+		}
+		va_end(p);
+		return (sum);
 	}
-	va_end(p);
-	return (sum);
 }
